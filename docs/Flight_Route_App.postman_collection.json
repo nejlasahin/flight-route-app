@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "dcc1edcb-8e7f-44aa-b9d4-d991cc9252d9",
+		"name": "Flight Route App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17091208"
+	},
+	"item": [
+		{
+			"name": "Locations",
+			"item": [
+				{
+					"name": "Get Location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/locations/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Location",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Esenboga Airport\",\r\n  \"country\": \"Turkey\",\r\n  \"city\": \"Ankara\",\r\n  \"location_code\": \"ESB\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/locations/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Save Location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Esenboga Airport\",\r\n  \"country\": \"Turkey\",\r\n  \"city\": \"Ankara\",\r\n  \"location_code\": \"ESB\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/locations"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/locations"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Locations",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/locations/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transportations",
+			"item": [
+				{
+					"name": "Get Transportation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/transportations/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Transportation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"origin_location_id\": 1,\r\n  \"destination_location_id\": 2,\r\n  \"transportation_type\": \"BUS\",\r\n  \"operating_days\": [\r\n    1\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/transportations/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Save Transportation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"origin_location_id\": 1,\r\n  \"destination_location_id\": 2,\r\n  \"transportation_type\": \"SUBWAY\",\r\n  \"operating_days\": [\r\n    1\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/v1/transportations"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Transportations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/transportations"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Transportation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/v1/transportations/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Routes",
+			"item": [
+				{
+					"name": "Get Routes With Params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/routes?origin_location_id=1&destination_location_id=4&travel_date=2025-05-17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "origin_location_id",
+									"value": "1"
+								},
+								{
+									"key": "destination_location_id",
+									"value": "4"
+								},
+								{
+									"key": "travel_date",
+									"value": "2025-05-17"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
