@@ -1,7 +1,6 @@
 import axios from 'axios';
 import {Button, Modal} from 'react-bootstrap';
 import {useCallback, useEffect, useReducer, useState} from 'react';
-import {useNavigate} from 'react-router-dom';
 import {MdDelete, MdEdit} from 'react-icons/md';
 
 const initialLocationState = {

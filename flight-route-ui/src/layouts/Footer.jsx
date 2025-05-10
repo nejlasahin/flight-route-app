@@ -1,14 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function Footer() {
     return (
-        <>
-            <footer className="mt-5 text-center">
-                <p>designed by <a className='text-decoration-none' href="https://github.com/nejlasahin" target="_blank"><span
-                    className="text-danger">@nejlasahin</span></a></p>
-            </footer>
-        </>
-    )
+        <footer className="bg-white text-dark text-center">
+            <p>© 2025 Flight Route App - Nejla Sahin</p>
+        </footer>
+    );
 }
 
 export default Footer;
